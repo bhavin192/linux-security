@@ -33,3 +33,27 @@
 ---
 
 ### Encryption using <span style="color: #e49436">dm-crypt/LUKS</span>
+
+**Linux Unified Key Setup(LUKS)** is a specification for device encryption
+
+- LUKS uses kernel device mapper subsystem via dm-crypt module
+
+- Creating and accessing encrypted device through ```cryptsetup``` utility
+
+- LUKS also protecting mobile devices as
+    - Removable storage media
+	- Laptop disk drives
+
+---
+
+### Creating encrypted block in anaconda
+
+- Create encrypted devices during system installation
+
+    - Indivisual partition
+
+	- software RAID array
+
+	- logical volume
+
+- **anaconda** offers option to set global passphrase for devices
