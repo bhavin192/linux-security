@@ -87,5 +87,5 @@ Permissive
 @[1-2](Get the current policy)
 @[5-6](setenforce help)
 @[9-13](Changing the policy to Permissive)
-@[15](To disable the SELinux, edit the configuration file `/etc/selinux/config` 
+@[14-15](To disable the SELinux, edit the configuration file `/etc/selinux/config` 
 and change `SELINUX=disabled`)
