@@ -24,3 +24,68 @@ Discretionary access control
 
 - Example - ssh keys can be read by other software
 
+---
+
+#### The solution SELinux
+
+non-discretionary access control or MAC 
+
+- Adds new security properties to files, processes, sockets, ports
+
+- Flexible security policies which can be changed
+
+- Implemented in the Linux Kernel using Linux Security Module framework
+
+---
+
+#### SELinux Contexts 
+
+SELinux policy rule
+
+- Files and processes are labled with context
+- It includes user, role, type which helps to decide the access
+
+```sh
+[fido@localhost ~]$ ls -Z /etc/passwd
+system_u:object_r:passwd_file_t:s0 /etc/passwd
+
+```
+---
+
+#### SELinux policies 
+
+SELinux has three modes 
+
+- Enforcing
+
+- Permissive
+
+- Disabled 
+
+---
+
+#### Changing Policy 
+
+```sh
+[fido@localhost ~]$ getenforce
+Enforcing
+  
+
+[fido@localhost ~]$ setenforce --help
+usage:  setenforce [ Enforcing | Permissive | 1 | 0 ]
+
+
+[fido@localhost ~]$ setenforce 0
+
+
+[fido@localhost ~]$ getenforce
+Permissive
+
+
+```
+
+@[1-2](Get the current policy)
+@[5-6](setenforce help)
+@[9-13](Changing the policy to Permissive)
+@[15](To disable the SELinux, edit the configuration file `/etc/selinux/config` 
+and change `SELINUX=disabled`)
