@@ -54,6 +54,3 @@ root# fsck -y /dev/sda8
 -  $ chown user:group /path/to/file
 -  $ chgrp group /path/to/file
 -  $ umask 033
-
----
-
