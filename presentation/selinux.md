@@ -49,6 +49,10 @@ SELinux policy rule
 [fido@localhost ~]$ ls -Z /etc/passwd
 system_u:object_r:passwd_file_t:s0 /etc/passwd
 
+
+[fido@localhost ~]$ ls -Z /usr/bin/passwd
+system_u:object_r:passwd_exec_t:s0 /usr/bin/passwd
+
 ```
 ---
 
